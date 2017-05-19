@@ -17,6 +17,12 @@ public class Processo {
     private String aya;
     private String iaa;
 
+    public Processo(int id, Boolean coordenador, Boolean participante) {
+        this.id = id;
+        this.coordenador = coordenador;
+        this.participante = participante;
+    }
+    
     public int getId() {
         return id;
     }
