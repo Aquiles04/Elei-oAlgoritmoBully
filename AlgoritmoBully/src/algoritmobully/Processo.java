@@ -5,17 +5,21 @@
  */
 package algoritmobully;
 
+import java.net.Socket;
+
 /**
  *
  * @author alexandre.chaves
  */
-public class Processo {
+public class Processo implements Runnable{
  
     private int id;
     private Boolean coordenador;
     private Boolean participante;
     private String aya;
     private String iaa;
+    private String group;
+    private Socket socket;
 
     public Processo(int id, Boolean coordenador, Boolean participante) {
         this.id = id;
@@ -61,6 +65,11 @@ public class Processo {
 
     public void setIaa(String iaa) {
         this.iaa = iaa;
+    }
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
