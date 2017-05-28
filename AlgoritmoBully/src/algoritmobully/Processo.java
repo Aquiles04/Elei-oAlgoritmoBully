@@ -170,8 +170,14 @@ public class Processo implements Runnable {
             p.mSocket.send(sendPacket);
             p.mSocket.receive(receivePacket);
             
-            // Colocar tempo aguardando ... se nao houver resposta coordenador = true else false
             System.out.println(receivePacket);
+            
+            // Colocar tempo aguardando ... se nao houver resposta coordenador = true else false
+            //.... nao consigo pensar em algo no momento
+            if (nao houve resposta == false)
+            {
+                p.setCoordenador(true);
+            }
             
             while (true) {
 
@@ -189,6 +195,11 @@ public class Processo implements Runnable {
                 {
                     portaCoordenador = receivePacket.getPort();
                     opcao = 2;
+                }
+                
+                if (resposta coordenador falhar iniciar eleicao)
+                {
+                    opcao = 3;
                 }
                 
                 switch (opcao) {
